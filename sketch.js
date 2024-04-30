@@ -1,3 +1,6 @@
+//Kat Wright
+//DMA 062
+//Spring 2024
 
 let font, points=[], r=10, angle = 0;
 
