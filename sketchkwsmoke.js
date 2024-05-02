@@ -2,8 +2,6 @@
 //DMA 062
 //Spring 2024
 
-//Squishy Grip interactive AD
-
 let font, points=[], r=10, angle = 0;
 
 function preload(){
@@ -13,7 +11,7 @@ function preload(){
 function setup() {
   createCanvas(800, 400);
   frameRate(5);
- points = font.textToPoints("Squishy Grip", 50, 300, 300,  {sampleFactor: .6}
+ points = font.textToPoints("KW", 50, 300, 300,  {sampleFactor: .6}
 )
  print(points);
 }
