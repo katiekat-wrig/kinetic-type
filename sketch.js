@@ -4,29 +4,41 @@
 
 //Squishy Grip interactive AD
 
-let font, points=[], r=10, angle = 0;
+let squishyfont, handfont, aurora, eva, habanero, hr, pochi, seadog, claw;
 
 function preload(){
-  font = loadFont("Apricots-Regular.ttf");
+  //fonts
+  squishyfont = loadFont("SquishyGrip-Regular.ttf");
+  handfont = loadFont("KatHandwritten_Regular-Regular.ttf");
+
+  //images
+  aurora = loadImage("Images/Aurora2.png")
+  eva = loadImage("Images/Eva2.png")
+  habanero = loadImage("Images/Habanero2.png")
+  hr = loadImage("Images/HR2.png")
+  pochi = loadImage("Images/Pochi2.png")
+  seadog = loadImage("Images/Seadog2.png")
+
+  claw = loadImage("Images/claw.svg")
+
 }
 
 function setup() {
   createCanvas(800, 400);
-  frameRate(5);
- points = font.textToPoints("Squishy Grip", 50, 300, 300,  {sampleFactor: .6}
-)
- print(points);
+
 }
 
 function draw() {
-  background(203, 195, 227);
-  //text('hello', 10, 50);
-  stroke(195, 177, 225)
-  for(let i = 0; i < points.length; i++){
-    //ellipse(points[i].x, points[i].y, 10, 10)
-    ellipse(points[i].x + r * sin(angle + i*25), points[i].y, 10, 10)
+  background(225);
+  
+  //character type
 
-  }
+  //squishy grip logo
 
-  angle += 10;
+  //claw
+  
+
+  //change to images
+
+  
 }
