@@ -4,7 +4,7 @@
 
 //Squishy Grip interactive AD
 
-let squishyfont, handfont, aurora, eva, habanero, hr, pochi, seadog, claw;
+let squishyfont, handfont, aurora, eva, habanero, hr, pochi, seadog, claw, logo;
 
 function preload(){
   //fonts
@@ -20,6 +20,7 @@ function preload(){
   seadog = loadImage("Images/Seadog2.png")
 
   claw = loadImage("Images/claw.svg")
+  logo = loadImage("")
 
 }
 
@@ -34,6 +35,7 @@ function draw() {
   //character type
 
   //squishy grip logo
+
 
   //claw
   
