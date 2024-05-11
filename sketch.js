@@ -2,45 +2,44 @@
 //DMA 062
 //Spring 2024
 
-//Squishy Grip interactive AD
+let font, points = [],
+  r = 10,
+  angle = 0;
+let colorMap = {
+  'r': [237, 104, 104], // Red
+  'o': [243, 164, 112], // Orange
+  'y': [241, 220, 101], // Yellow
+  'g': [107, 241, 101], // Green
+  'b': [101, 111, 241], // Blue
+  'p': [196, 140, 243] // Purple
+};
+let currentColor = [255, 0, 0]; // Initial color
 
-let squishyfont, handfont, aurora, eva, habanero, hr, pochi, seadog, claw, logo;
-
-function preload(){
-  //fonts
-  squishyfont = loadFont("SquishyGrip-Regular.ttf");
-  handfont = loadFont("KatHandwritten_Regular-Regular.ttf");
-
-  //images
-  aurora = loadImage("Images/Aurora2.png")
-  eva = loadImage("Images/Eva2.png")
-  habanero = loadImage("Images/Habanero2.png")
-  hr = loadImage("Images/HR2.png")
-  pochi = loadImage("Images/Pochi2.png")
-  seadog = loadImage("Images/Seadog2.png")
-
-  claw = loadImage("Images/claw.svg")
-  logo = loadImage("")
-
+function preload() {
+  font = loadFont("Apricots-Regular.ttf");
 }
 
 function setup() {
   createCanvas(800, 400);
-
+  frameRate(5);
+  points = font.textToPoints("KW", 175, 300, 300, {
+    sampleFactor: .6
+  });
+  print(points);
 }
 
 function draw() {
-  background(225);
-  
-  //character type
+  //background(203, 195, 227);
+  background(33, 33, 33);
+  stroke(currentColor);
+  for (let i = 0; i < points.length; i++) {
+    ellipse(points[i].x + r * sin(angle + i * 25), points[i].y, 10, 10);
+  }
+  angle += 10;
+}
 
-  //squishy grip logo
-
-
-  //claw
-  
-
-  //change to images
-
-  
+function keyPressed() {
+  if (key in colorMap) {
+    currentColor = colorMap[key];
+  }
 }
